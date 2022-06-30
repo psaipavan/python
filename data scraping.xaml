@@ -1,0 +1,127 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="773,1159" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="data scraping" sap:VirtualizedContainerService.HintSize="476,1094" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="x:String" Name="outresult" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Iphone 11- Buy Products Online at Best Price in India - All Categories | Flipkar" sap:VirtualizedContainerService.HintSize="434,1002" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="99cf4dd6-0106-4ad7-875b-d75e7f0362c3" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Data scraping" sap:VirtualizedContainerService.HintSize="376,786" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='iphone11'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Url links'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='price'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="Rows" MaximumResults="0" Version="V1">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="8, -821, 1583, 7568" FriendlyName="'Explore Plusiphone'" FullSelectorArgument="&lt;webctrl parentid='container' tag='DIV' /&gt;" Guid="f90a81b4-dfa6-46ab-9249-20b3477485ca" InformativeScreenshot="89c4b99e0d9b72e2d9c8e68308fb9eb0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Iphone 11- Buy Products Online at Best Price in India - All Categories | Flipkart.com' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:OutputDataTable Text="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Total Rows:&quot; &amp; ExtractDataTable.Rows.Count]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;out result&quot;]" />
+            <ui:WriteRange AddHeaders="False" DataTable="[ExtractDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="sheet1" StartingCell="A1" WorkbookPath="datascraping.xlsx" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-4, 47, 1600, 860" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="4a4acb9edb3f759002aa02f0ab20e863.png" Selector="&lt;html app='chrome.exe' title='Iphone 11- Buy Products Online at Best Price in India - All Categories | Flipkart.com'/&gt;" Url="https://www.flipkart.com/search?q=iphone+11&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=1&amp;as-type=HISTORY" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
